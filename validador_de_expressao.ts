@@ -1,10 +1,10 @@
-function expressaoValida(entrada: string): boolean {
+function expressaoValida(entrada: string): String {
     const regex = /^(\d+([+\-*/]\d+)*\d*)$/;
-    return regex.test(entrada);
+    if (regex.test(entrada)){
+        return "Expressão VÁLIDA";
+    } else {
+        return "Expressão INVÁLIDA"
+    }
 }
 
-if(expressaoValida("14+9/7+5*3")){
-    console.log("Expressão VÁLIDA")
-} else {
-    console.log("Expressão INVÁLIDA")
-}
+expressaoValida("12+9/3*7-23")
